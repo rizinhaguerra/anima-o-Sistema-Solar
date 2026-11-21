@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Solar Animado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🌌 Sistema Solar</h1>
+    <p>Explore os planetas e suas órbitas</p>
+  </header>
+
+  <main>
+    <section class="sistema" id="sistema">
+
+      <div class="sol" id="sol">
+        <span>☀</span>
+      </div>
+
+      <div class="orbita mercurio">
+        <div class="planeta" data-planeta="Mercúrio"></div>
+      </div>
+
+      <div class="orbita venus">
+        <div class="planeta" data-planeta="Vênus"></div>
+      </div>
+
+      <div class="orbita terra">
+        <div class="planeta" data-planeta="Terra">
+          <div class="lua-orbita">
+            <div class="lua"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="orbita marte">
+        <div class="planeta" data-planeta="Marte"></div>
+      </div>
+
+      <div class="orbita jupiter">
+        <div class="planeta" data-planeta="Júpiter"></div>
+      </div>
+
+      <div class="orbita saturno">
+        <div class="planeta" data-planeta="Saturno">
+          <div class="anel"></div>
+        </div>
+      </div>
+
+      <div class="orbita urano">
+        <div class="planeta" data-planeta="Urano"></div>
+      </div>
+
+      <div class="orbita netuno">
+        <div class="planeta" data-planeta="Netuno"></div>
+      </div>
+
+    </section>
+
+    <section class="painel">
+      <div class="controles">
+        <button id="iniciar">▶ Iniciar</button>
+        <button id="pausar">⏸ Pausar</button>
+        <button id="reiniciar">🔄 Reiniciar</button>
+      </div>
+
+      <label for="velocidade">
+        Velocidade da animação:
+        <span id="valorVelocidade">1x</span>
+      </label>
+
+      <input type="range" id="velocidade"
+        min="0.5" max="3" step="0.5" value="1">
+
+      <div class="informacoes" id="informacoes">
+        <h2>🌎 Sistema Solar</h2>
+        <p>Clique em um planeta para conhecer mais sobre ele!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Projeto de Programação Front-End • HTML, CSS e JavaScript
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
