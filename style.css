@@ -1,0 +1,318 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: radial-gradient(circle at top, #14244b, #030611 70%);
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  
+  header {
+    padding: 25px 10px 10px;
+  }
+  
+  header h1 {
+    color: #ffffff;
+    font-size: 2.3rem;
+    text-shadow: 0 0 15px #7b8dff;
+  }
+  
+  header p {
+    color: #b8c7e8;
+    margin-top: 8px;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sistema {
+    position: relative;
+    width: 650px;
+    height: 650px;
+    max-width: 95vw;
+    max-height: 95vw;
+    margin: 20px auto;
+  }
+  
+  .sol {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, #fff7a8, #ffae00, #ff5a00);
+    box-shadow: 0 0 25px #ffae00, 0 0 60px #ff6a00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  
+  .sol span {
+    font-size: 45px;
+  }
+  
+  .orbita {
+    position: absolute;
+    border: 1px solid rgba(150, 170, 255, 0.28);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: orbitar linear infinite;
+  }
+  
+  .planeta {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .planeta:hover {
+    filter: brightness(1.7);
+    transform: translateX(-50%) scale(1.3);
+  }
+  
+  .mercurio {
+    width: 110px;
+    height: 110px;
+    animation-duration: 4s;
+  }
+  
+  .mercurio .planeta {
+    width: 10px;
+    height: 10px;
+    background: #aaa49b;
+  }
+  
+  .venus {
+    width: 160px;
+    height: 160px;
+    animation-duration: 7s;
+  }
+  
+  .venus .planeta {
+    width: 16px;
+    height: 16px;
+    background: #d9a46b;
+  }
+  
+  .terra {
+    width: 220px;
+    height: 220px;
+    animation-duration: 10s;
+  }
+  
+  .terra .planeta {
+    width: 18px;
+    height: 18px;
+    background: #258cff;
+    box-shadow: 0 0 10px #258cff;
+  }
+  
+  .marte {
+    width: 280px;
+    height: 280px;
+    animation-duration: 15s;
+  }
+  
+  .marte .planeta {
+    width: 14px;
+    height: 14px;
+    background: #ff5733;
+  }
+  
+  .jupiter {
+    width: 350px;
+    height: 350px;
+    animation-duration: 22s;
+  }
+  
+  .jupiter .planeta {
+    width: 35px;
+    height: 35px;
+    background: #d6a477;
+  }
+  
+  .saturno {
+    width: 420px;
+    height: 420px;
+    animation-duration: 30s;
+  }
+  
+  .saturno .planeta {
+    width: 29px;
+    height: 29px;
+    background: #e8cc91;
+  }
+  
+  .anel {
+    position: absolute;
+    width: 48px;
+    height: 15px;
+    border: 3px solid #d8b878;
+    border-radius: 50%;
+    top: 7px;
+    left: -10px;
+    transform: rotate(-25deg);
+  }
+  
+  .urano {
+    width: 490px;
+    height: 490px;
+    animation-duration: 38s;
+  }
+  
+  .urano .planeta {
+    width: 23px;
+    height: 23px;
+    background: #75e1e7;
+  }
+  
+  .netuno {
+    width: 560px;
+    height: 560px;
+    animation-duration: 48s;
+  }
+  
+  .netuno .planeta {
+    width: 22px;
+    height: 22px;
+    background: #465bff;
+    box-shadow: 0 0 10px #465bff;
+  }
+  
+  @keyframes orbitar {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+  
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+  /* Lua orbitando a Terra */
+  
+  .lua-orbita {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    top: -9px;
+    left: -9px;
+    animation: orbitar 2s linear infinite;
+  }
+  
+  .lua {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #eee;
+    box-shadow: 0 0 5px white;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+  }
+  
+  .painel {
+    background: rgba(15, 25, 55, 0.85);
+    border: 1px solid #354777;
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    margin: 10px auto 30px;
+    box-shadow: 0 0 25px rgba(75, 100, 255, 0.15);
+  }
+  
+  .controles {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background: #536dfe;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background: #7e92ff;
+    transform: scale(1.05);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #cbd6ff;
+  }
+  
+  input[type="range"] {
+    width: 100%;
+    margin-bottom: 20px;
+    cursor: pointer;
+    accent-color: #8296ff;
+  }
+  
+  .informacoes {
+    border-top: 1px solid #354777;
+    padding-top: 15px;
+    min-height: 100px;
+  }
+  
+  .informacoes h2 {
+    color: #8fa7ff;
+    margin-bottom: 10px;
+  }
+  
+  .informacoes p {
+    color: #d4dcf7;
+    line-height: 1.6;
+  }
+  
+  footer {
+    padding: 20px;
+    color: #8594bd;
+    font-size: 13px;
+  }
+  
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.7rem;
+    }
+  
+    .painel {
+      padding: 15px;
+    }
+  
+    button {
+      padding: 10px;
+      font-size: 12px;
+    }
+  }
+  
