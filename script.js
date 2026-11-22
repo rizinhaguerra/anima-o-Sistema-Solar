@@ -109,10 +109,3 @@ planetas.forEach((planeta) => {
   });
 });
 
-// Mensagem inicial
-painelInformacoes.innerHTML = `
-  <h2>🌎 Sistema Solar</h2>
-  <p>Clique em um planeta para conhecer mais sobre ele!</p>
-`;
-
-console.log("Sistema Solar iniciado com sucesso!");
