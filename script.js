@@ -108,4 +108,11 @@ planetas.forEach((planeta) => {
     `;
   });
 });
+// Mensagem inicial
+painelInformacoes.innerHTML = `
+  <h2>🌎 Sistema Solar</h2>
+  <p>Explore o universo e observe os planetas em órbita!</p>
+`;
+
+console.log("Sistema Solar iniciado com sucesso!");
 
